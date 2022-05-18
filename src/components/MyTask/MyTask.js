@@ -17,7 +17,7 @@ const MyTask = () => {
    
 
     useEffect(() => {
-        fetch('http://localhost:5000/task')
+        fetch('https://lit-citadel-94085.herokuapp.com/task')
             .then(res => res.json())
             .then(data => setTask(data))
     }, []);
@@ -25,7 +25,7 @@ const MyTask = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/task/${id}`;
+            const url = `https://lit-citadel-94085.herokuapp.com/task/${id}`;
             fetch(url, {
                 method: 'DELETE',
 

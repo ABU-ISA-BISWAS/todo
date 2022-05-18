@@ -7,7 +7,7 @@ const AddTask = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
-        const url = `http://localhost:5000/task`;
+        const url = `https://lit-citadel-94085.herokuapp.com/task`;
         fetch(url, {
             method: 'POST',
             headers: {
